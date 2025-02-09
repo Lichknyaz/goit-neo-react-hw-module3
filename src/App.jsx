@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import ContactForm from "./ContactForm/ContactForm";
-import ContactList from "./ContactList/ContactList";
-import SearchBox from "./SearchBox/SearchBox";
+import SearchBox from "./components/SearchBox/SearchBox";
 import initialContacts from "./contacts.json";
+import ContactForm from "./components/ContactForm/ContactForm";
+import ContactList from "./components/ContactList/ContactList";
 
 function App() {
   const [filter, setFilter] = useState("");
