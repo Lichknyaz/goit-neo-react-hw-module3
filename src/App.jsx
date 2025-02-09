@@ -9,7 +9,7 @@ function App() {
   const [filter, setFilter] = useState("");
   const [contacts, setContacts] = useState(() => {
     const savedContacts = JSON.parse(window.localStorage.getItem("contacts"));
-    if (savedContacts && savedContacts.length !== 0) return savedContacts;
+    if (savedContacts) return savedContacts;
     else return initialContacts;
   });
 
