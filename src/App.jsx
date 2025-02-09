@@ -8,8 +8,8 @@ import initialContacts from "./contacts.json";
 function App() {
   const [filter, setFilter] = useState("");
   const [contacts, setContacts] = useState(() => {
-    const savedContacts = window.localStorage.getItem("contacts");
-    if (savedContacts) return JSON.parse(savedContacts);
+    const savedContacts = JSON.parse(window.localStorage.getItem("contacts"));
+    if (savedContacts.length !== 0) return savedContacts;
     else return initialContacts;
   });
 
